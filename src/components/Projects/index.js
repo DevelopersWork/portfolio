@@ -21,22 +21,22 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
           }
           <Divider />
-          {toggle === 'web app' ?
-            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+          {toggle === 'unity-advanced' ?
+            <ToggleButton active value="unity-advanced" onClick={() => setToggle('unity-advanced')}>Unity Advanced</ToggleButton>
             :
-            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            <ToggleButton value="unity-advanced" onClick={() => setToggle('unity-advanced')}>Unity Advanced</ToggleButton>
           }
           <Divider />
-          {toggle === 'android app' ?
-            <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
+          {toggle === 'unity-fundamentals' ?
+            <ToggleButton active value="unity-fundamentals" onClick={() => setToggle('unity-fundamentals')}>Unity Fundamentals</ToggleButton>
             :
-            <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
+            <ToggleButton value="unity-fundamentals" onClick={() => setToggle('unity-fundamentals')}>Unity Fundamentals</ToggleButton>
           }
           <Divider />
-          {toggle === 'machine learning' ?
-            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
+          {toggle === 'cpp' ?
+            <ToggleButton active value="cpp" onClick={() => setToggle('cpp')}>C++</ToggleButton>
             :
-            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
+            <ToggleButton value="cpp" onClick={() => setToggle('cpp')}>C++</ToggleButton>
           }
         </ToggleButtonGroup>
         <CardContainer>
