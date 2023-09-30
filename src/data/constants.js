@@ -1,12 +1,13 @@
 export const Bio = {
   name: "Vijaya Gopinadh Reddy Velagala",
   roles: [
+    "The DevelopersWork",
     "Computer Science Graduate",
     "Specialist Programmer @ Infosys",
     "Game Developer",
   ],
-  description: [
-    "Hello there, I'm The-Developer driven by a passion for delivering innovative solutions and continuously improving my skills.",
+  description: "I'm The-Developer driven by a passion for delivering innovative solutions and continuously improving my skills.",
+  expert: [
     "",
     "Let's talk about work, shall we?",
     "As a highly motivated and dedicated software developer. My experience includes working as a Specialist Programmer(Big Data) at an IT firm, where I have honed my expertise in programming languages, technology stacks, and problem-solving techniques. I am also committed to staying current with the latest industry trends and technologies and regularly engaging in self-study and professional development.",
@@ -55,7 +56,12 @@ export const skills = [
         name: "Python",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
-      }
+      },
+      {
+        name: "JavaScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+      },
     ],
   },
   {
@@ -75,11 +81,7 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
       },
-      {
-        name: "JavaScript",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
-      },
+      
       {
         name: "Bootstrap",
         image:
@@ -126,6 +128,13 @@ export const skills = [
       {
         name: "Firebase",
         image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+      },
+      {
+        name: "Azure",
+        image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg",
+      },{
+        name: "Google Cloud",
+        image: "https://seeklogo.com/images/G/google-cloud-logo-ADE788217F-seeklogo.com.png",
       },
     ],
   },
@@ -224,11 +233,22 @@ export const education = [
 
 export const projects = [
   {
+    id: 7,
+    title: "FPS",
+    date: "September 2023",
+    description: "In this thrilling game, players become fearless explorers, tasked with saving their planet from imminent doom. Armed with a high-tech blaster, they engage in fierce combat against relentless alien invaders. Managing the blaster's energy is crucial as they battle three enemy types – aggressive, neutral, and passive, including common foes, minibosses, and epic bosses. Strategic resource management and precise shooting are essential in this action-packed adventure. Will you emerge as the hero who saves the day?",
+    image: "https://i9.ytimg.com/vi_webp/TXqQ6RxIOSw/mq1.webp?sqp=CPy54KgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEMgUihlMA8=&rs=AOn4CLB9UOpFlofacn70MF-qBZRwOa7o-Q",
+    tags: ["Unity", "Game Development", "C#", "Design Patterns"],
+    category: "unity-advanced",
+    github: "https://github.com/DW-Upskilling/FPS_Game_Jam_Mat-2_Outscal",
+    webapp: "https://github.com/DW-Upskilling/FPS_Game_Jam_Mat-2_Outscal",
+  },
+  {
     id: 6,
     title: "Clash Royale - Chest System",
     date: "August 2023",
     description: "Chest System is a showcase of implementing a chest system similar to Clash Royale's. The main focus is on maintaining code quality and ensuring the extensibility of the game for future enhancements. The key features include Currency Management, Chest Variety, Chest Slots, Chest Generation, Chest Timer, Unlock Options, Slot Management, Chest States, Reward System, and Queueing Mechanism.",
-    image: "",
+    image: "https://user-images.githubusercontent.com/85812175/227512089-5ed843a1-cdf4-4e10-a370-54f48865b267.png",
     tags: ["Unity", "Game Development", "C#", "Design Patterns"],
     category: "unity-advanced",
     github: "https://github.com/DW-Upskilling/Clash-Royale---Chest-System",
@@ -239,7 +259,7 @@ export const projects = [
     title: "Break the Bricks 2D",
     date: "July 2023",
     description: "It is a 2D brick-breaking game that involves breaking different types of bricks using a paddle and balls. The main objective of the game is to clear each level by breaking all the standard bricks while avoiding obstacles like unbreakable bricks.",
-    image: "",
+    image: "https://i9.ytimg.com/vi_webp/uOYwka1tGmY/mq3.webp?sqp=CKCu4KgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGF8gXyhfMA8=&rs=AOn4CLCDqaxmIObFzMqV-wCyVddI5g5sJw",
     tags: ["Unity", "Game Development", "C#"],
     category: "unity-fundamentals",
     github: "https://github.com/DW-Upskilling/Break-the-Bricks-Chapter-27---Assignment-4",
@@ -250,7 +270,7 @@ export const projects = [
     title: "Minesweeper",
     date: "July 2023",
     description: "Minesweeper is a classic puzzle game played on a grid of cells. Mines are randomly distributed across the grid, and players must successfully uncover all cells without mines to win. Each cell reveals a number indicating the count of adjacent mines, enabling players to strategically deduce safe moves and avoid mines.",
-    image: "",
+    image: "https://minesweeper.online/img/homepage/intermediate.png",
     tags: ["C++", "Object Oriented Programming", "Game Development", "Data Structures"],
     category: "cpp",
     github: "https://github.com/DW-Upskilling/Outscal_Data-Structure-Fundamentals-II",
@@ -261,7 +281,7 @@ export const projects = [
     title: "Connect 4",
     date: "June 2023",
     description: "Connect 4 is a classic two-player game with red and blue participants. The game is played on a board consisting of 6 rows and 7 columns. The objective is to connect four of your colored dots either horizontally, vertically, or diagonally.",
-    image: "",
+    image: "https://outscal.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F820ee8bc-1fa2-4f48-aeeb-799169b07de6%2FUntitled.png?table=block&id=d69eb599-3efc-4cba-b105-ebaaeb99a402&spaceId=8c9f7b97-3438-434a-b8ca-0a53eb7262ea&width=480&userId=&cache=v2",
     tags: ["C++", "Object Oriented Programming", "Game Development", "Data Structures"],
     category: "cpp",
     github: "https://github.com/DW-Upskilling/Outscal_Data-Structure-Fundamentals-I",
@@ -272,7 +292,7 @@ export const projects = [
     title: "Harmony Keeper 2D",
     date: "May 2023 - June 2023",
     description: "Harmony Keeper 2D is an exciting game that takes players on a journey to cross dimensions and reach the slime character's home. The game revolves around careful navigation, avoiding contact with animals, and collecting platforms to gain power and pass through the portal.",
-    image: "",
+    image: "https://i9.ytimg.com/vi_webp/vfE9hKmej6k/mq3.webp?sqp=CPSr4KgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGG4gKCh_MA8=&rs=AOn4CLBwfaFgQAzpfEprLPtmXP5aihLH-A",
     tags: ["Unity", "Game Development", "C#"],
     category: "unity-fundamentals",
     github: "https://github.com/DW-Upskilling/Harmony-Keeper-2D_Mat-2_Outscal",
@@ -285,7 +305,7 @@ export const projects = [
     description:
       "The game allows the snake to move in all four directions with screen wrapping. It grows in length and score by consuming mass gainer food, while mass burner food decreases the score. Power-ups, such as shields, score boosts, and speed increases, enhance gameplay. Co-op mode enables two-player gameplay with collision-based deaths. The game features a basic UI with death, win, score, and lobby screens, as well as pause/resume, restart, and quit functionality.",
     image:
-      "",
+      "https://i9.ytimg.com/vi_webp/b7XjwDTQsTY/mq2.webp?sqp=CPSr4KgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gOih_MA8=&rs=AOn4CLCAATt8uQBYMs321SOqQKPM2JgnCA",
     tags: ["Unity", "Game Development", "C#"],
     category: "unity-fundamentals",
     github: "https://github.com/DW-Upskilling/Co-Op-Snake-2D_Mat-1_Outscal",
@@ -298,7 +318,7 @@ export const projects = [
     description:
       "As part of the Outscal Full Stack Game Development course, I completed two projects: MAT-I 2-Player-Battle-Adventure and MAT-II Text-based-RPG-Adventure-Game. These projects aimed to showcase my proficiency in object-oriented programming and code architecture.",
     image:
-      "https://outscal.com/_next/image?url=https%3A%2F%2Foutscal-content.s3.ap-south-1.amazonaws.com%2Ftext-based-adventure-game.png&w=1920&q=100",
+      "https://media.tenor.com/mFF0pBv6w3cAAAAC/bushido-society-bushido.gif",
     tags: ["C++", "Object Oriented Programming", "Game Development"],
     category: "cpp",
     github: "https://github.com/DW-Upskilling/Outscal_OOPs-Cplusplus",
