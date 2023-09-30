@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
+// import { Snackbar } from '@mui/material';
 
 const Container = styled.div`
 display: flex;
@@ -89,36 +89,36 @@ const ContactInput = styled.input`
   }
 `
 
-const ContactInputMessage = styled.textarea`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`
+// const ContactInputMessage = styled.textarea`
+//   flex: 1;
+//   background-color: transparent;
+//   border: 1px solid ${({ theme }) => theme.text_secondary};
+//   outline: none;
+//   font-size: 18px;
+//   color: ${({ theme }) => theme.text_primary};
+//   border-radius: 12px;
+//   padding: 12px 16px;
+//   &:focus {
+//     border: 1px solid ${({ theme }) => theme.primary};
+//   }
+// `
 
-const ContactButton = styled.input`
-  width: 100%;
-  text-decoration: none;
-  text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  padding: 13px 16px;
-  margin-top: 2px;
-  border-radius: 12px;
-  border: none;
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 18px;
-  font-weight: 600;
-`
+// const ContactButton = styled.input`
+//   width: 100%;
+//   text-decoration: none;
+//   text-align: center;
+//   background: hsla(271, 100%, 50%, 1);
+//   background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+//   background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+//   background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+//   padding: 13px 16px;
+//   margin-top: 2px;
+//   border-radius: 12px;
+//   border: none;
+//   color: ${({ theme }) => theme.text_primary};
+//   font-size: 18px;
+//   font-weight: 600;
+// `
 
 
 
@@ -139,16 +139,15 @@ const Contact = () => {
       });
   }
 
-
-
   return (
     <Container>
       <Wrapper>
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        {/* <ContactForm ref={form} onSubmit={handleSubmit}> */}
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" disabled value="vijayagopinadhreddy.velagala@thedevelopers.work" />
+          <ContactInput placeholder="Your Email" name="from_email" disabled={open} value="vijayagopinadhreddy.velagala@thedevelopers.work" />
           {/* <ContactInput placeholder="Your Name" name="from_name" /> */}
           {/* <ContactInput placeholder="Subject" name="subject" /> */}
           {/* <ContactInputMessage placeholder="Message" rows="4" name="message" /> */}
