@@ -1,14 +1,18 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bf538fe7.css",
-    "main.js": "/portfolio/static/js/main.5bb2d721.js",
+    "main.js": "/portfolio/static/js/main.868b727e.js",
+    "static/media/MAT-2_HarmonyKeeper2D.png": "/portfolio/static/media/MAT-2_HarmonyKeeper2D.4b610976fab087aa858e.png",
     "static/media/HeroImage.jpg": "/portfolio/static/media/HeroImage.d9439b85872fc3cab354.jpg",
+    "static/media/Mat-II_UnityAdvanced.png": "/portfolio/static/media/Mat-II_UnityAdvanced.6fee3db99742db78c934.png",
+    "static/media/MAT-I_Co-Op_Snake_2D_Demo_1.png": "/portfolio/static/media/MAT-I_Co-Op_Snake_2D_Demo_1.c9921ef924a0ce9f56f9.png",
+    "static/media/Chapter27_Assignment4_BreaktheBricks.png": "/portfolio/static/media/Chapter27_Assignment4_BreaktheBricks.283747aea765634360fe.png",
     "index.html": "/portfolio/index.html",
     "main.bf538fe7.css.map": "/portfolio/static/css/main.bf538fe7.css.map",
-    "main.5bb2d721.js.map": "/portfolio/static/js/main.5bb2d721.js.map"
+    "main.868b727e.js.map": "/portfolio/static/js/main.868b727e.js.map"
   },
   "entrypoints": [
     "static/css/main.bf538fe7.css",
-    "static/js/main.5bb2d721.js"
+    "static/js/main.868b727e.js"
   ]
 }
