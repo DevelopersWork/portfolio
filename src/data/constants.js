@@ -86,7 +86,7 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
       },
-      
+
       {
         name: "Bootstrap",
         image:
@@ -137,7 +137,7 @@ export const skills = [
       {
         name: "Azure",
         image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg",
-      },{
+      }, {
         name: "Google Cloud",
         image: "https://seeklogo.com/images/G/google-cloud-logo-ADE788217F-seeklogo.com.png",
       },
@@ -239,14 +239,14 @@ export const education = [
 export const projects = [
   {
     id: 7,
-    title: "FPS",
+    title: "Eggventure 3D",
     date: "September 2023",
     description: "In this thrilling game, players become fearless explorers, tasked with saving their planet from imminent doom. Armed with a high-tech blaster, they engage in fierce combat against relentless alien invaders. Managing the blaster's energy is crucial as they battle three enemy types – aggressive, neutral, and passive, including common foes, minibosses, and epic bosses. Strategic resource management and precise shooting are essential in this action-packed adventure. Will you emerge as the hero who saves the day?",
     image: a,
     tags: ["Unity", "Game Development", "C#", "Design Patterns"],
     category: "unity-advanced",
-    github: "https://github.com/DW-Upskilling/FPS_Game_Jam_Mat-2_Outscal",
-    webapp: "https://github.com/DW-Upskilling/FPS_Game_Jam_Mat-2_Outscal",
+    github: "https://github.com/DW-Upskilling/Eggventure-3D_Mat-2_Outscal",
+    webapp: "https://github.com/DW-Upskilling/Eggventure-3D_Mat-2_Outscal",
   },
   {
     id: 6,
