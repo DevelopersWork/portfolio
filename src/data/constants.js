@@ -1,3 +1,8 @@
+import a from '../images/Mat-II_UnityAdvanced.png';
+import b from '../images/Chapter27_Assignment4_BreaktheBricks.png';
+import c from '../images/MAT-2_HarmonyKeeper2D.png';
+import d from '../images/MAT-I_Co-Op_Snake_2D_Demo_1.png';
+
 export const Bio = {
   name: "Vijaya Gopinadh Reddy Velagala",
   roles: [
@@ -20,8 +25,8 @@ export const Bio = {
     "",
     "You've read this far! Thank you."
   ],
-  github: "https://github.com/DevelopersWork",
-  resume: "#",
+  github: "https://github.com/DW-Upskilling",
+  resume: "https://drive.google.com/file/d/1Hu9vausLEGk8N_6QmgJ-pkb_fygAKjY5/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/developerswork/",
   twitter: "https://twitter.com/developersworkt",
   insta: "https://www.instagram.com/developerswork",
@@ -237,7 +242,7 @@ export const projects = [
     title: "FPS",
     date: "September 2023",
     description: "In this thrilling game, players become fearless explorers, tasked with saving their planet from imminent doom. Armed with a high-tech blaster, they engage in fierce combat against relentless alien invaders. Managing the blaster's energy is crucial as they battle three enemy types – aggressive, neutral, and passive, including common foes, minibosses, and epic bosses. Strategic resource management and precise shooting are essential in this action-packed adventure. Will you emerge as the hero who saves the day?",
-    image: "https://i9.ytimg.com/vi_webp/TXqQ6RxIOSw/mq1.webp?sqp=CPy54KgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEMgUihlMA8=&rs=AOn4CLB9UOpFlofacn70MF-qBZRwOa7o-Q",
+    image: a,
     tags: ["Unity", "Game Development", "C#", "Design Patterns"],
     category: "unity-advanced",
     github: "https://github.com/DW-Upskilling/FPS_Game_Jam_Mat-2_Outscal",
@@ -259,7 +264,7 @@ export const projects = [
     title: "Break the Bricks 2D",
     date: "July 2023",
     description: "It is a 2D brick-breaking game that involves breaking different types of bricks using a paddle and balls. The main objective of the game is to clear each level by breaking all the standard bricks while avoiding obstacles like unbreakable bricks.",
-    image: "https://i9.ytimg.com/vi_webp/uOYwka1tGmY/mq3.webp?sqp=CKCu4KgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGF8gXyhfMA8=&rs=AOn4CLCDqaxmIObFzMqV-wCyVddI5g5sJw",
+    image: b,
     tags: ["Unity", "Game Development", "C#"],
     category: "unity-fundamentals",
     github: "https://github.com/DW-Upskilling/Break-the-Bricks-Chapter-27---Assignment-4",
@@ -292,7 +297,7 @@ export const projects = [
     title: "Harmony Keeper 2D",
     date: "May 2023 - June 2023",
     description: "Harmony Keeper 2D is an exciting game that takes players on a journey to cross dimensions and reach the slime character's home. The game revolves around careful navigation, avoiding contact with animals, and collecting platforms to gain power and pass through the portal.",
-    image: "https://i9.ytimg.com/vi_webp/vfE9hKmej6k/mq3.webp?sqp=CPSr4KgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGG4gKCh_MA8=&rs=AOn4CLBwfaFgQAzpfEprLPtmXP5aihLH-A",
+    image: c,
     tags: ["Unity", "Game Development", "C#"],
     category: "unity-fundamentals",
     github: "https://github.com/DW-Upskilling/Harmony-Keeper-2D_Mat-2_Outscal",
@@ -304,8 +309,7 @@ export const projects = [
     date: "May 2023",
     description:
       "The game allows the snake to move in all four directions with screen wrapping. It grows in length and score by consuming mass gainer food, while mass burner food decreases the score. Power-ups, such as shields, score boosts, and speed increases, enhance gameplay. Co-op mode enables two-player gameplay with collision-based deaths. The game features a basic UI with death, win, score, and lobby screens, as well as pause/resume, restart, and quit functionality.",
-    image:
-      "https://i9.ytimg.com/vi_webp/b7XjwDTQsTY/mq2.webp?sqp=CPSr4KgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD0gOih_MA8=&rs=AOn4CLCAATt8uQBYMs321SOqQKPM2JgnCA",
+    image: d,
     tags: ["Unity", "Game Development", "C#"],
     category: "unity-fundamentals",
     github: "https://github.com/DW-Upskilling/Co-Op-Snake-2D_Mat-1_Outscal",
