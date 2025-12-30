@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
-  "homepage": "https://DevelopersWork.github.io/portfolio",
+  "version": "0.2.1",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
     "@emotion/react": "^11.14.0",

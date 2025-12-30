@@ -1,66 +1,52 @@
-import { ThemeProvider } from "styled-components";
-import { useState } from "react";
-import { darkTheme, lightTheme } from './utils/Themes.js'
-import Navbar from "./components/Navbar";
-import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
-import HeroSection from "./components/HeroSection";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import ProjectDetails from "./components/ProjectDetails";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled, { keyframes, css } from 'styled-components';
+import { GlobalStyles } from './styles/GlobalStyles';
+import HUD from './components/HUD';
+import OriginCard from './components/OriginCard';
+import Inventory from './components/Inventory';
+import QuestLog from './components/QuestLog';
+import Footer from './components/Footer';
 
-const Body = styled.div`
-  background-color: ${({ theme }) => theme.bg};
-  width: 100%;
-  overflow-x: hidden;
-`
+// Define the float animation
+const float = keyframes`
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(5deg); }
+  50% { transform: translateY(0) rotate(-5deg); }
+  75% { transform: translateY(20px) rotate(2deg); }
+`;
 
-const Wrapper = styled.div`
-  background: linear-gradient(38.73deg, rgba(0, 173, 181, 0.15) 0%, rgba(0, 173, 181, 0) 50%), linear-gradient(141.27deg, rgba(0, 173, 181, 0) 50%, rgba(0, 173, 181, 0.15) 100%);
-  width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
-`
+// Define a wrapper that can apply the Zero-G effect
+const ZeroGWrapper = styled.div`
+  ${props => props.$active && css`
+    & > * {
+      animation: ${float} 6s ease-in-out infinite;
+      transition: all 1s ease;
+    }
+    
+    /* Randomize delays for children to make it look chaotic but smooth */
+    & > *:nth-child(odd) { animation-duration: 7s; animation-delay: 0.5s; }
+    & > *:nth-child(even) { animation-duration: 5s; animation-delay: 1.2s; }
+  `}
+`;
+
 function App() {
-  const darkMode = true;
-  // const [darkMode, setDarkMode] = useState(true);
-  // setDarkMode(true);
-  const [openModal, setOpenModal] = useState({ state: false, project: null });
-  const activateChaos = () => {
-    document.body.style.transform = "rotate(180deg)";
-    document.body.style.transition = "transform 1s ease-in-out";
-    document.body.style.filter = "invert(1)";
+  const [chaosMode, setChaosMode] = useState(false);
+
+  const toggleChaos = () => {
+    setChaosMode(!chaosMode);
   };
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
-        <Navbar />
-        <Body>
-          <HeroSection />
-          <Wrapper>
-            <Skills />
-            <Experience />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Education />
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state &&
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          }
-          <button className="chaos-trigger" onClick={activateChaos}>
-            ⚠️ INITIATE ZERO-G
-          </button>
-        </Body>
-      </Router>
-    </ThemeProvider>
+    <>
+      <GlobalStyles />
+      <HUD />
+      <ZeroGWrapper $active={chaosMode}>
+        <OriginCard />
+        <Inventory />
+        <QuestLog />
+        <Footer onChaos={toggleChaos} />
+      </ZeroGWrapper>
+    </>
   );
 }
 
