@@ -1,26 +1,18 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
 	"name": "Node.js",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Create the workspace directory if it doesn't exist
-	"onCreateCommand": ["mkdir", "-p", "/workspace/portfolio"],
-	// Use 'postCreateCommand' to install packages from package.json
-	"postCreateCommand": ["cp", "package.json",  "/workspace/portfolio"],
-	// Use 'postStartCommand' to install packages
-	"postStartCommand": "npm install --silent",
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "root"
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:dev-24-bullseye",
+	"forwardPorts": [
+		3000
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"dsznajder.es7-react-js-snippets"
+			]
+		}
+	},
+	"postCreateCommand": "npm install",
+	"remoteUser": "node"
 }
