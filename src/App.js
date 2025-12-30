@@ -21,7 +21,7 @@ const Body = styled.div`
 `
 
 const Wrapper = styled.div`
-  background: linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
+  background: linear-gradient(38.73deg, rgba(0, 173, 181, 0.15) 0%, rgba(0, 173, 181, 0) 50%), linear-gradient(141.27deg, rgba(0, 173, 181, 0) 50%, rgba(0, 173, 181, 0.15) 100%);
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
@@ -30,6 +30,12 @@ function App() {
   // const [darkMode, setDarkMode] = useState(true);
   // setDarkMode(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+  const activateChaos = () => {
+    document.body.style.transform = "rotate(180deg)";
+    document.body.style.transition = "transform 1s ease-in-out";
+    document.body.style.filter = "invert(1)";
+  };
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router >
@@ -49,6 +55,9 @@ function App() {
           {openModal.state &&
             <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
           }
+          <button className="chaos-trigger" onClick={activateChaos}>
+            ⚠️ INITIATE ZERO-G
+          </button>
         </Body>
       </Router>
     </ThemeProvider>

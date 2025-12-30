@@ -184,6 +184,33 @@ export const SubTitle = styled.div`
   }
 `;
 
+export const ChapterTitle = styled.div`
+  font-family: 'Orbitron', sans-serif;
+  color: ${({ theme }) => theme.primary};
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+`;
+
+export const MVPBadge = styled.span`
+  background: rgba(0, 173, 181, 0.2);
+  color: ${({ theme }) => theme.primary};
+  border: 1px solid ${({ theme }) => theme.primary};
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  font-family: 'Rajdhani', sans-serif;
+  margin-left: 10px;
+  vertical-align: middle;
+  display: inline-block;
+`;
+
 export const ResumeButton = styled.a`
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -199,10 +226,7 @@ export const ResumeButton = styled.a`
     font-size: 20px;
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: ${({ theme }) => theme.primary};
     box-shadow:  20px 20px 60px #1F2634,
     -20px -20px 60px #1F2634;
     &:hover {

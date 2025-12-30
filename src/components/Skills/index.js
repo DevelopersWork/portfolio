@@ -119,10 +119,21 @@ const SkillImage = styled.img`
 `
 
 
+const ChapterTitle = styled.div`
+  font-family: 'Orbitron', sans-serif;
+  color: ${({ theme }) => theme.primary};
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+`;
+
 const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
+        <ChapterTitle>CHAPTER 02: POWER-UPS</ChapterTitle>
         <Title>Skills</Title>
         <Desc>Continuously building a versatile skill set over the years, I emphasize recent technical expertise while remaining open to learning and growth in new areas.
         </Desc>

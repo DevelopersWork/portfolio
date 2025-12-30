@@ -11,6 +11,7 @@ export const Bio = {
     "Specialist Programmer @ Infosys",
     "Game Developer",
   ],
+  email: "vijayagopinadhreddy.velagala@thedevelopers.work",
   description: "I'm The-Developer driven by a passion for delivering innovative solutions and continuously improving my skills.",
   expert: [
     "",
