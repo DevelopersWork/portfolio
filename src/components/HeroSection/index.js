@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroBgAnimation from '../HeroBgAnimation'
-import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, TitleName, Span, SubTitle, ResumeButton } from './HeroStyle'
+import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, TitleName, Span, SubTitle, ResumeButton, ChapterTitle, MVPBadge } from './HeroStyle'
 import HeroImg from '../../images/HeroImage.jpg'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
@@ -14,7 +14,8 @@ const HeroSection = () => {
                 </HeroBg>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
-                        <Title>Hi, I am <br /> <TitleName>{Bio.name}</TitleName></Title>
+                        <ChapterTitle>CHAPTER 01: ORIGIN STORY</ChapterTitle>
+                        <Title>Hi, I am <br /> <TitleName>{Bio.name}</TitleName> <MVPBadge>MVP NOMINEE</MVPBadge></Title>
                         <TextLoop>
                             <Span>
                                 <Typewriter

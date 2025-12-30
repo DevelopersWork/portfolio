@@ -103,3 +103,13 @@ export const CardContainer = styled.div`
     //     grid-template-columns: repeat(1, 1fr);
     // }
 `;
+
+export const ChapterTitle = styled.div`
+  font-family: 'Orbitron', sans-serif;
+  color: ${({ theme }) => theme.primary};
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+`;

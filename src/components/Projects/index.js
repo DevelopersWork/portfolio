@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyle'
+import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider, ChapterTitle } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
 
@@ -10,6 +10,7 @@ const Projects = ({ openModal, setOpenModal }) => {
   return (
     <Container id="projects">
       <Wrapper>
+        <ChapterTitle>CHAPTER 03: MISSION LOG</ChapterTitle>
         <Title>Projects</Title>
         <Desc>
           I've engaged in a diverse array of projects throughout my journey. Here are some of my notable game-related projects.

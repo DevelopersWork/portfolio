@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // import _default from '../../themes/default';
 
 export const Nav = styled.div`
-    background-color: ${({theme}) => theme.card_light};
+    background-color: ${({ theme }) => theme.card_light};
     height: 80px;
     display: flex;
     align-items: center;
@@ -133,7 +133,7 @@ export const MobileMenu = styled.div`
     right: 0;
     width: 100%;
     padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
+    background: ${({ theme }) => theme.card_light + 99};
     transition: all 0.6s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
     border-radius: 0 0 20px 20px;
@@ -190,7 +190,7 @@ export const MobileMenuButton = styled.a`
   }
 `;
 
-export  const MobileLink = styled.a`
+export const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -205,14 +205,44 @@ export  const MobileLink = styled.a`
   }
 `;
 
-export const MobileNavLogo = styled(LinkR)`
-  width: 80%;
-  padding: 0 6px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  text-decoration: none;
-  @media (max-width: 640px) {
-    padding: 0 0px;
-  }
+
+export const HUD = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    color: ${({ theme }) => theme.primary};
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 20px;
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
+`;
+
+export const Stat = styled.div`
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 15px;
+    &:last-child {
+        border: none;
+        padding-right: 0;
+    }
+`;
+
+export const Label = styled.span`
+    color: ${({ theme }) => theme.text_secondary};
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+`;
+
+export const Value = styled.span`
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
 `;

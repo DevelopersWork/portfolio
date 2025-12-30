@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    
+:root {
+  --teal-glow: #00ADB5;
 }
 
-html{
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: 0px !important;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
@@ -20,22 +24,51 @@ body{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 4px;
-    height: 80px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background:#222A35;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #575C66;
-    border-radius: 6px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #626970;
-  }
+  width: 4px;
+  height: 80px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222A35;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #575C66;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #626970;
+}
+
+/* The Floating Chaos Button */
+.chaos-trigger {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 184, 166, 0.1);
+  color: var(--teal-glow);
+  border: 2px solid var(--teal-glow);
+  padding: 15px 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+  /* Always on top */
+  box-shadow: 0 0 15px rgba(0, 173, 181, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.chaos-trigger:hover {
+  background: var(--teal-glow);
+  color: #000;
+  box-shadow: 0 0 40px rgba(0, 173, 181, 0.8);
+  letter-spacing: 2px;
+}
