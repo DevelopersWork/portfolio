@@ -147,7 +147,7 @@ const Contact = () => {
         {/* <ContactForm ref={form} onSubmit={handleSubmit}> */}
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" disabled={open} value="vijayagopinadhreddy.velagala@thedevelopers.work" />
+          <ContactInput placeholder="Your Email" name="from_email" disabled={open} defaultValue="vijayagopinadhreddy.velagala@thedevelopers.work" />
           {/* <ContactInput placeholder="Your Name" name="from_name" /> */}
           {/* <ContactInput placeholder="Subject" name="subject" /> */}
           {/* <ContactInputMessage placeholder="Message" rows="4" name="message" /> */}
