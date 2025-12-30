@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
     plugins: [react()],
@@ -17,7 +18,7 @@ export default defineConfig({
     },
     resolve: {
         alias: {
-            'styled-components': '/workspaces/portfolio/src/__mocks__/styled-components.js',
+            'styled-components': fileURLToPath(new URL('./src/__mocks__/styled-components.js', import.meta.url)),
         },
     },
     test: {
