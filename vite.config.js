@@ -18,7 +18,8 @@ export default defineConfig({
     },
     test: {
         globals: true,
-        environment: 'node',
+        environment: 'jsdom',
+        setupFiles: './src/setupTests.js',
         isolate: false,
         alias: {
             'styled-components': fileURLToPath(new URL('./src/__mocks__/styled-components.js', import.meta.url)),
