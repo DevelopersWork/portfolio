@@ -5,6 +5,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 import { toggleChaos } from './redux/portfolioSlice';
 import HUD from './components/HUD';
 import OriginCard from './components/OriginCard';
+import ExperienceTimeline from './components/ExperienceTimeline';
 import Inventory from './components/Inventory';
 import QuestLog from './components/QuestLog';
 import Footer from './components/Footer';
@@ -45,6 +46,7 @@ function App() {
       <HUD />
       <ZeroGWrapper $active={chaosMode}>
         <OriginCard />
+        <ExperienceTimeline />
         <Inventory />
         <QuestLog />
         <Footer onChaos={handleToggleChaos} />

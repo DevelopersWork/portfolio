@@ -3,6 +3,7 @@ import links from '../constants/links.json';
 import content from '../constants/content.json';
 import missions from '../constants/missions.json';
 import skills from '../constants/skills.json';
+import experience from '../constants/experience.json';
 
 const initialState = {
     chaosMode: false,
@@ -16,7 +17,8 @@ const initialState = {
     links: links,
     content: content,
     missions: missions,
-    skills: skills
+    skills: skills,
+    experience: experience
 };
 
 const portfolioSlice = createSlice({
