@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
+
 
 const Container = styled.div`
     width: 100%;
@@ -171,17 +171,15 @@ const TechTag = styled.span`
     font-family: 'Rajdhani', sans-serif;
 `;
 
-const ExperienceTimeline = () => {
-    const experience = useSelector(state => state.portfolio.experience);
-
+const UniversalTimeline = ({ title, chapter, data }) => {
     return (
         <Container>
-            <ChapterTag>Chapter 1.5 // System Logs</ChapterTag>
-            <Title>CAREER HISTORY</Title>
+            <ChapterTag>{chapter}</ChapterTag>
+            <Title>{title}</Title>
 
             <ScrollWrapper>
                 <TimelineTrack>
-                    {experience.map((item, index) => {
+                    {data.map((item, index) => {
                         const isEven = index % 2 === 0;
                         const position = isEven ? 'top' : 'bottom';
 
@@ -208,4 +206,4 @@ const ExperienceTimeline = () => {
     );
 };
 
-export default ExperienceTimeline;
+export default UniversalTimeline;

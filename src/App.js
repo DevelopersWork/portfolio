@@ -5,7 +5,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 import { toggleChaos } from './redux/portfolioSlice';
 import HUD from './components/HUD';
 import OriginCard from './components/OriginCard';
-import ExperienceTimeline from './components/ExperienceTimeline';
+import UniversalTimeline from './components/UniversalTimeline';
 import Inventory from './components/Inventory';
 import QuestLog from './components/QuestLog';
 import Footer from './components/Footer';
@@ -33,7 +33,7 @@ const ZeroGWrapper = styled.div`
 `;
 
 function App() {
-  const chaosMode = useSelector((state) => state.portfolio.chaosMode);
+  const { chaosMode, experience, education } = useSelector((state) => state.portfolio);
   const dispatch = useDispatch();
 
   const handleToggleChaos = () => {
@@ -46,7 +46,16 @@ function App() {
       <HUD />
       <ZeroGWrapper $active={chaosMode}>
         <OriginCard />
-        <ExperienceTimeline />
+        <UniversalTimeline
+          title="CAREER HISTORY"
+          chapter="Chapter 1.5 // System Logs"
+          data={experience}
+        />
+        <UniversalTimeline
+          title="ACADEMIC DATABASE"
+          chapter="Chapter 1.8 // Knowledge Base"
+          data={education}
+        />
         <Inventory />
         <QuestLog />
         <Footer onChaos={handleToggleChaos} />

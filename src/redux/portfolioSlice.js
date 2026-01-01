@@ -4,6 +4,7 @@ import content from '../constants/content.json';
 import missions from '../constants/missions.json';
 import skills from '../constants/skills.json';
 import experience from '../constants/experience.json';
+import education from '../constants/education.json';
 
 const initialState = {
     chaosMode: false,
@@ -18,7 +19,8 @@ const initialState = {
     content: content,
     missions: missions,
     skills: skills,
-    experience: experience
+    experience: experience,
+    education: education
 };
 
 const portfolioSlice = createSlice({
