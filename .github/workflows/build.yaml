@@ -1,8 +1,9 @@
 name: build
 
 on:
-  push:
-    branches: [ master ]
+  pull_request:
+    branches: [ testing ]
+    types: [ closed ]
 
 permissions:
   contents: write
