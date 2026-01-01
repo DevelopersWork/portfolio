@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import styled, { keyframes, css } from 'styled-components';
 import { GlobalStyles } from './styles/GlobalStyles';
+import { toggleChaos } from './redux/portfolioSlice';
 import HUD from './components/HUD';
 import OriginCard from './components/OriginCard';
 import Inventory from './components/Inventory';
@@ -30,10 +32,11 @@ const ZeroGWrapper = styled.div`
 `;
 
 function App() {
-  const [chaosMode, setChaosMode] = useState(false);
+  const chaosMode = useSelector((state) => state.portfolio.chaosMode);
+  const dispatch = useDispatch();
 
-  const toggleChaos = () => {
-    setChaosMode(!chaosMode);
+  const handleToggleChaos = () => {
+    dispatch(toggleChaos());
   };
 
   return (
@@ -44,7 +47,7 @@ function App() {
         <OriginCard />
         <Inventory />
         <QuestLog />
-        <Footer onChaos={toggleChaos} />
+        <Footer onChaos={handleToggleChaos} />
       </ZeroGWrapper>
     </>
   );

@@ -1,4 +1,6 @@
+import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
 const Card = styled.div`
     width: 100%;
@@ -91,6 +93,8 @@ const Badge = styled.div`
 `;
 
 const OriginCard = () => {
+    const { content } = useSelector(state => state.portfolio);
+
     return (
         <Card>
             <Screw className="tl" />
@@ -105,10 +109,10 @@ const OriginCard = () => {
             <Title>Vijaya<br />Gopinadh</Title>
             <SubTitle>Specialist Programmer @ Infosys</SubTitle>
 
-            <Quote>"Coding Worlds Into Existence"</Quote>
+            <Quote>"{content.hero.quote}"</Quote>
 
             <div style={{ marginTop: '40px', color: '#aaa' }}>
-                <p><strong>Current Objective:</strong> Building scalable pipelines & immersive games.</p>
+                <p><strong>Current Objective:</strong> {content.hero.objective}</p>
             </div>
         </Card>
     );

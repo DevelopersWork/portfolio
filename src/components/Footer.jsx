@@ -1,4 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { useSelector } from 'react-redux';
 
 const ChaosTrigger = styled.button`
     position: fixed;
@@ -98,6 +100,16 @@ const Copyright = styled.div`
 `;
 
 const Footer = ({ onChaos }) => {
+    const { links, content } = useSelector(state => state.portfolio);
+    const [textIndex, setTextIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTextIndex((prev) => (prev + 1) % content.footer.scrollTexts.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [content.footer.scrollTexts.length]);
+
     return (
         <>
             <ChaosTrigger onClick={onChaos}>
@@ -110,20 +122,20 @@ const Footer = ({ onChaos }) => {
                     <p style={{ color: '#888', marginBottom: '30px' }}>"Just a dev trying to make fun games"</p>
 
                     <ConnectConsole>
-                        <BlinkText>&gt; WAITING FOR INPUT...</BlinkText>
+                        <BlinkText>&gt; {content.footer.scrollTexts[textIndex]}</BlinkText>
                         <div className="footer-links">
-                            <ConsoleBtn href="mailto:vijayagopinadhreddy.velagala@thedevelopers.work">
+                            <ConsoleBtn href={`mailto:${links.email}`}>
                                 [ EMAIL ME ]
                             </ConsoleBtn>
 
-                            <ConsoleBtn href="#">
+                            <ConsoleBtn href={links.linkedin} target="_blank" rel="noopener noreferrer">
                                 [ LINKEDIN ]
                             </ConsoleBtn>
                         </div>
                     </ConnectConsole>
 
                     <Copyright>
-                        &copy; 2025 VIJAYA GOPINADH REDDY VELAGALA <br />
+                        {content.footer.copyright} <br />
                         LEVEL 3 SPECIALIST PROGRAMMER
                     </Copyright>
                 </div>

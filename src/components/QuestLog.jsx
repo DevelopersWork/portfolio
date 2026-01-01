@@ -1,4 +1,6 @@
+import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
 const Container = styled.div`
     max-width: 1000px;
@@ -102,37 +104,9 @@ const LaunchBtn = styled.button`
     }
 `;
 
-const missions = [
-    {
-        title: "Eggventure 3D",
-        desc: "Unity 3D Action Game",
-        status: "COMPLETED",
-        active: false,
-        bg: "#333",
-        imgAlt: "[IMG: Eggventure]",
-        btnText: "REPLAY MISSION"
-    },
-    {
-        title: "Minesweeper",
-        desc: "Classic Logic Puzzle",
-        status: "COMPLETED",
-        active: false,
-        bg: "#222",
-        imgAlt: "[IMG: Minesweeper]",
-        btnText: "REPLAY MISSION"
-    },
-    {
-        title: "Enterprise Data Lake",
-        desc: "Azure & Databricks Architecture",
-        status: "IN PROGRESS",
-        active: true,
-        bg: "#1a1a1a",
-        imgAlt: "[IMG: Azure Pipeline]",
-        btnText: "VIEW SPECS"
-    }
-];
-
 const QuestLog = () => {
+    const missions = useSelector(state => state.portfolio.missions);
+
     return (
         <Container>
             <ChapterTag>Chapter 3 // Quest Log</ChapterTag>

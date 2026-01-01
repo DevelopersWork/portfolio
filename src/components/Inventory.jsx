@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
 const Container = styled.div`
     max-width: 800px;
@@ -58,18 +59,9 @@ const SkillOrb = styled.div`
     }
 `;
 
-const skills = [
-    "Azure Data Factory",
-    "Unity Engine",
-    "Python",
-    "Apache Spark",
-    "C#",
-    "React JS",
-    "Docker",
-    "Databricks"
-];
-
 const Inventory = () => {
+    const skills = useSelector(state => state.portfolio.skills);
+
     return (
         <Container>
             <ChapterTag>Chapter 2 // Inventory</ChapterTag>
