@@ -1,0 +1,16 @@
+{
+    "hero": {
+        "quote": "Coding Worlds Into Existence",
+        "objective": "Building scalable pipelines & immersive games."
+    },
+    "footer": {
+        "scrollTexts": [
+            "Initializing core systems...",
+            "Scanning for new missions...",
+            "Data pipelines: ONLINE",
+            "Physics engine: LOADED",
+            "Waiting for user input..."
+        ],
+        "copyright": "© 2025 VIJAYA GOPINADH REDDY VELAGALA"
+    }
+}
